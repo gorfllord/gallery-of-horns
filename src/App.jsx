@@ -10,7 +10,6 @@ function App() {
   return (
     <>
       <div>
-        <p>Stuf</p>
         <Header />
         <Gallery />
         <Footer />

@@ -1,10 +1,12 @@
 import React from 'react';
-import { render } from 'react-dom';
 
-class Header extends React.Component {}
-render(
-  <>
-  <h1>Gallery of Horns</h1>
-  </>
-);
+class Header extends React.Component {
+  render() {
+    return (
+      <header>
+        <h1>Gallery of Horns</h1>
+      </header>
+    )
+  }
+}
 export default Header;
