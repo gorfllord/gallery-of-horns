@@ -1,9 +1,20 @@
-# React + Vite
+# Lab 02
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Gallery of Horns
 
-Currently, two official plugins are available:
+Here is an app that will take an input of different horned beasts and displays them for folks to be able to see all the info and choose their favorite beast.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# gallery-of-horns
+### Author: Geoff Lloyd
+
+### Links and Resources
+
+* [submission PR](https://github.com/gorfllord/gallery-of-horns/pull/3)
+
+### Lighthouse Accessibility Report Score
+
+* Provide a screenshot of your score after running a Lighthouse Accessibility report.
+
+### Reflections and Comments
+
+* Consider including the answers to your daily journal and submission questions here
+* This is also a good place to reflect on the tools and resources used and learned

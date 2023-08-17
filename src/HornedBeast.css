@@ -1,0 +1,32 @@
+article {
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.cardImage {
+  width: 100%;
+}
+.title {
+  font-weight: bold;
+}
+.button {
+  background-color: rgb(130, 168, 240);
+  margin-left: 1rem;
+}
+.favs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
