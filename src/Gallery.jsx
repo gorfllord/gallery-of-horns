@@ -12,9 +12,9 @@ class Gallery extends React.Component {
       return <HornedBeast key={beast._id} title={beast.title} imageUrl={beast.image_url} description={beast.description} keyword={beast.keyword} horns={beast.horns} handleShowModal={this.props.handleShowModal}/>
     });
     return (
-      <main>
+      <>
         {beastArr}
-      </main>
+      </>
     );
   }
 }
