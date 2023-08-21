@@ -2,18 +2,52 @@ import './App.css';
 import Header from './Header';
 import Gallery from './Gallery';
 import Footer from './Footer';
+import data from './data.json';
+import Modal from 'react-bootstrap/Modal';
+import React from 'react';
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isModalDisplaying: false,
+      selectedBeast: '',
+      selectedBeastAlt: '',
+      selectedBeastName: ''
+    };
+  };
 
-  return (
-    <>
-      <div>
-        <Header />
-        <Gallery />
-        <Footer />
-      </div>
-    </>
-  )
+  handleShowModal = (imageURL, altText, title) => {
+    this.setState({
+      isModalDisplaying: true,
+      selectedBeast: imageURL,
+      selectedBeastAlt: altText,
+      selectedBeastName: title
+      })
+  };
+
+  handleCloseModal = () => {
+    this.setState({isModalDisplaying: false});
+  }
+
+  render() {
+    return (
+      <>
+        <div>
+          <Header />
+          <Gallery handleShowModal={this.handleShowModal} data={data}/>
+          <Footer />
+          <Modal size='lg' show={this.state.isModalDisplaying} onHide={this.handleCloseModal}>
+          <Modal.Header closeButton>
+            <Modal.Title>{this.state.selectedBeastName}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body><img src={this.state.selectedBeast} alt={this.state.selectedBeastAlt}/></Modal.Body>
+          </Modal>
+        </div>
+      </>
+    )
+  }
 }
+
 
 export default App
