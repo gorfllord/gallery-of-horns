@@ -29,7 +29,7 @@ class HornedBeast extends React.Component {
   render() {
     return (
       <article>
-        <Card className="card">
+        <Card className="cardBeast">
           <Card.Title className="title">{this.props.title}</Card.Title>
           <Card.Img className="cardImage" src={this.props.imageUrl} alt={this.props.description} title={this.props.title} onClick={this.handleImageClick}/>
           <Card.Text>{this.props.description}</Card.Text>
