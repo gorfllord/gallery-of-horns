@@ -3,10 +3,9 @@ article {
   flex-direction: row;
   width: 25%;
 }
-.card {
+.cardBeast {
   display: flex;
   flex-direction: column;
-  width: 100%;
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem;
@@ -14,6 +13,7 @@ article {
   justify-content: center;
   background-color: white;
   color: black;
+  min-width: 300px;
 }
 .cardImage {
   width: 100%;
@@ -33,4 +33,7 @@ article {
   justify-content: center;
   background-color: rgb(69, 3, 114);
   color: lavender;
+}
+.favs p {
+  margin: 1rem;
 }

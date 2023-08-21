@@ -1,10 +1,11 @@
 import './App.css';
+import React from 'react';
 import Header from './Header';
 import Gallery from './Gallery';
 import Footer from './Footer';
 import data from './data.json';
 import Modal from 'react-bootstrap/Modal';
-import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Turns out this is vital and it is not in the demo code, or mentioned anywhere else in the class materials.
 
 class App extends React.Component {
   constructor(props) {
@@ -40,7 +41,10 @@ class App extends React.Component {
             <Modal.Header closeButton>
               <Modal.Title>{this.state.selectedBeastName}</Modal.Title>
             </Modal.Header>
-            <Modal.Body><img src={this.state.selectedBeast} alt={this.state.selectedBeastAlt}/></Modal.Body>
+            <Modal.Body>
+              <img src={this.state.selectedBeast} alt={this.state.selectedBeastAlt}/>
+              <p>{this.state.selectedBeastAlt}</p>
+            </Modal.Body>
           </Modal>
         </main>
         <Footer />
@@ -50,4 +54,4 @@ class App extends React.Component {
 }
 
 
-export default App
+export default App;

@@ -1,4 +1,3 @@
-import './Gallery.css';
 import React from 'react';
 import HornedBeast from './HornedBeast';
 
