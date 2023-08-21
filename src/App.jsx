@@ -15,7 +15,7 @@ class App extends React.Component {
       selectedBeastAlt: '',
       selectedBeastName: ''
     };
-  };
+  }
 
   handleShowModal = (imageURL, altText, title) => {
     this.setState({
@@ -28,22 +28,22 @@ class App extends React.Component {
 
   handleCloseModal = () => {
     this.setState({isModalDisplaying: false});
-  }
+  };
 
   render() {
     return (
       <>
-        <div>
-          <Header />
+        <Header />
+        <main>
           <Gallery handleShowModal={this.handleShowModal} data={data}/>
-          <Footer />
-          <Modal size='lg' show={this.state.isModalDisplaying} onHide={this.handleCloseModal}>
-          <Modal.Header closeButton>
-            <Modal.Title>{this.state.selectedBeastName}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body><img src={this.state.selectedBeast} alt={this.state.selectedBeastAlt}/></Modal.Body>
+          <Modal className="imagePop" size='lg' show={this.state.isModalDisplaying} onHide={this.handleCloseModal}>
+            <Modal.Header closeButton>
+              <Modal.Title>{this.state.selectedBeastName}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body><img src={this.state.selectedBeast} alt={this.state.selectedBeastAlt}/></Modal.Body>
           </Modal>
-        </div>
+        </main>
+        <Footer />
       </>
     )
   }
